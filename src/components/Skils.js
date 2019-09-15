@@ -11,20 +11,18 @@ function Skills({ items, loading, error, search, onChange }) {
   return (
     <Fragment>
       <div>
-        <input type="search" value={search} onChange={handleSearch} />
+        <input type="search" value={search} onChange={handleSearch} placeholder="Type something to search..."/>
       </div>
       {loading ? (
         <div>searching...</div>
       ) : error ? (
         <div>Error: {error.message}</div>
-      ) : items.length ? (
+      ) : (
         <ul>
           {items.map(o => (
             <li key={o.id}>{o.name}</li>
           ))}
         </ul>
-      ) : (
-        <div>Type something to search...</div>
       )}
     </Fragment>
   );

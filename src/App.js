@@ -1,6 +1,5 @@
 import React from "react";
 import { Provider } from "react-redux";
-// import "./App.css";
 import Skills from "./components/Skils";
 import store from "./store";
 
